@@ -69,3 +69,10 @@ closeModal.addEventListener("click", ()=>{
     modalMorse.classList.remove("hideContent")
     btn_Morse.classList.remove("hide-btn-morse")
 })
+
+//toogle navMobile
+const listBtn = window.document.querySelector("#list-nav")
+listBtn.addEventListener("click",()=>{
+    const navMobile = window.document.querySelector("#nav-mobile")
+    navMobile.classList.toggle("NavOn")
+})

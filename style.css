@@ -56,7 +56,7 @@ header #logo a:hover {
   scale: 1.2;
   transition: all ease-in-out .25s;
   color: rgb(53, 53, 53);
-  
+
 
 }
 
@@ -75,6 +75,10 @@ header nav ul li a:hover {
   color: rgb(53, 53, 53);
   scale: 1.2;
   transition: all ease-in-out .25s;
+}
+
+#list-nav {
+  display: none;
 }
 
 /* Main-Edit */
@@ -120,7 +124,7 @@ textarea,
   padding-top: .4rem;
   padding-left: .4rem;
   resize: none;
-  width:90%;
+  width: 90%;
   height: 14rem;
   border-radius: .8rem;
   margin: auto;
@@ -132,6 +136,7 @@ textarea,
   height: fit-content;
   text-align: left;
   margin-bottom: 4rem;
+  justify-content: left;
 }
 
 textarea::placeholder {
@@ -184,17 +189,16 @@ textarea::placeholder {
   position: absolute;
   left: 0;
   top: 0;
-
-
-
 }
-.btn-morse:hover{
+
+.btn-morse:hover {
   color: yellowgreen;
   background-color: rgba(0, 0, 0, 0.87);
   cursor: pointer;
   scale: 1.04;
   transition: all ease-in-out .25s;
 }
+
 .btn-morse i {
   margin-right: .5rem;
   display: flex;
@@ -243,15 +247,86 @@ textarea::placeholder {
   cursor: pointer;
 
   transition: all ease-in-out .25s;
-   color: yellowgreen;
+  color: yellowgreen;
   font-weight: 100;
 
 }
 
-.modal-close{
-  display: flex ;
+.modal-close {
+  display: flex;
 }
 
-@media screen and (max-width:800px){
+@media screen and (max-width:800px) {
+  .wrapper-content {
+    width: 80%;
+    justify-content: center;
+    margin: auto;
+    padding: 2rem 2rem 2rem 2rem;
+    margin-top: 4rem;
+  }
+
+  textarea,
+  .morseArea {
+    width: 100%;
+  }
+}
+
+#nav-mobile {
+  background: rgba(56, 51, 51, 0.781);
+  backdrop-filter: blur(4px);
+  display: none;
+  width: 70%;
+  height: 100vh;
+  position: absolute;
+  top: 1;
+  right: 0;
+  z-index: 999;
+  text-align: left;
+  justify-content: center;
+}
+
+#nav-mobile nav {
+  width: 90%;
+  margin-top: 2rem;
+}
+
+#nav-mobile nav ul{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 4rem;
+}
+#nav-mobile nav ul li{
+  background-color: rgba(0, 0, 0, 0.87);
+  border-radius: .4rem;
+  font-size: 1.8rem;
+  padding: .8rem .4rem .8rem .4rem;
+  text-align: center;
+}
+
+#nav-mobile nav ul li a{
+color: white;
+font-weight: 500;
+
+}
+#nav-mobile.NavOn{
+  display: flex;
+}
+@media screen and (max-width:637px) {
+
+  /*Header-Edit*/
+  header nav {
+    display: none;
+  }
+
+  #logo {
+    margin-left: -2.5rem;
+  }
+
+  #list-nav {
+    display: block;
+    font-size: 2.5rem;
+    margin-right: -2rem;
+  }
 
 }
